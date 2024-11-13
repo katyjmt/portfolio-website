@@ -1,0 +1,46 @@
+[
+  {
+      "name": "Avène",
+      "file": "avene.webp"
+  },
+  {
+      "name": "AYAM",
+      "file": "ayam.gif"
+  },
+  {
+      "name": "Bega",
+      "file": "bega.svg"
+  },
+  {
+      "name": "Kate Spade",
+      "file": "kate-spade.svg"
+  },
+  {
+    "name": "Klorane",
+    "file": "klorane-logo.png"
+},
+  {
+      "name": "ModelCo",
+      "file": "modelco.png"
+  },
+  {
+      "name": "Puma",
+      "file": "puma.png"
+  },
+  {
+      "name": "Sydney Symphony Orchestra",
+      "file": "sydney-symphony-orchestra.svg"
+  },
+  {
+      "name": "Tommy Hilfiger",
+      "file": "tommy-hilfiger.svg"
+  },
+  {
+      "name": "Van Heusen",
+      "file": "van-heusen.svg"
+  },
+  {
+      "name": "Warner Music Australia",
+      "file": "warner-music-australia.png"
+  }
+]
