@@ -1,12 +1,9 @@
 "use client";
 
 import About from "./components/About";
-import BrandBar from "./components/BrandBar";
 import Nav from "./components/Nav";
 import Portfolio from "./components/Portfolio";
 import Scroller from "./components/Scroller";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   // function adjustSectionHeight() {
