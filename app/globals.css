@@ -2,20 +2,133 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer utilities {
+  .nav-icon {
+    @apply w-6 h-6;
+  }
+  .scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100vw;
+    @apply bg-[var(--background)] z-40;
+  }
+  .scroll-content {
+    @apply inline-flex animate-scroll-horizontal;
+  }
+  .fix-to-nav {
+    @apply fixed left-0 right-0;
+    position: fixed;
+    top: 36px;
+  }
+  .small-scroll-img {
+    @apply px-8 h-scroller-sm w-scroller-sm animate-scroll-horizontal-sm;
+  }
+
+  .large-scroll-img {
+    @apply px-12 h-scroller w-scroller;
+  }
+
+  .section {
+    @apply flex flex-col pt-20;
+  }
+
+  .inset {
+    @apply w-11/12;
+  }
+
+  .shape {
+    /* border-radius: 31% 69% 66% 34% / 30% 65% 35% 70%  !important;
+    width: 20%;
+    height: 25%;
+    overflow: hidden; */
+    border: 1px solid black;
+  }
+
+  .shape-outside {
+    shape-outside: border-box;
+    shape-margin: 10px;
+  }
+
+  .project-section {
+    @apply flex flex-col-reverse md:flex-row gap-10;
+  }
+
+  .project-images {
+    @apply basis-6/12;
+  }
+
+  .project-image-ref {
+    @apply border border-black rounded-md w-full object-contain;
+  }
+
+  .project-image-caption {
+    @apply text-sm;
+  }
+
+  .project-text {
+    @apply basis-6/12 flex flex-col gap-6;
+  }
+
+  .project-tech-stack {
+    @apply flex justify-between items-end gap-4 sm:gap-10 my-4 flex-wrap;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-6xl font-medium uppercase;
+  }
+
+  h2 {
+    @apply font-evie text-5xl md:text-6xl font-medium uppercase mb-3;
+  }
+
+  h3 {
+    @apply font-evie text-3xl font-medium uppercase mb-2;
+  }
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+:root {
+  --background: #DAF2FF;
+  --foreground: #000;
+  --nav-height: 40px;
+}
+
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
 }
+
+.scroll-content img {
+  max-width: none;
+  height: none !important;
+}
+
+
+/* .gradient-background {
+  background: linear-gradient(79deg,#fcb756,#91aece,#e8a59f);
+  background-size: 180% 180%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */

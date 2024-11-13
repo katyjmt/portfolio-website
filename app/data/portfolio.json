@@ -1,0 +1,103 @@
+[
+  {
+    "name": "Planner customisation tool",
+    "slug": "planner-customisation-tool",
+    "shortDescription": "A React-based web app built using Remix for my business PLANNER.STUDIO.",
+    "description": "A web app built using Remix for my business PLANNER.STUDIO. The tool allows customers to create a customised planner by selecting a date range and browsing and adding page layouts of their choosing. Once they're done, a PDF is compiled with their selection and sent to me so I can print and bind their planner to send to them.",
+    "techStack": ["Remix", "Shopify", "Hydrogen", "React"],
+    "images": [
+      {"image": "create-a-planner.png", "width": "3024", "height": "1964", "alt": ""}
+    ],
+    "github": null,
+    "id": 1,
+    "overview": ["The planner customisation tool is a web app I'm in the process of building with Remix for my business PLANNER.STUDIO. Once live, it will allow customers to create custom planners by selecting a preferred date range and choosing from over 80 unique page layouts. When the customer finishes customising their planner, a compiled PDF will be generated and made available to me for printing."],
+    "purposeGoal": ["The idea for this tool came about to solve an inefficiency in my existing business workflow. Up until now, the planner customisation process has been entirely manual: I have face-to-face meetings with customers where they can browse layouts and let me know what they'd like to include. I then manually compile the pages into a PDF before printing and binding. The tool is being built so customers can make their choices autonomously and free up my time, delivering a better, more streamlined experience for everyone involved."],
+    "stackExplanation": ["I'm building this project using Shopify's Hydrogen headless framework, which uses Remix as its foundation and hooks into Shopify's GraphQL Admin API for Shopify-specific data (orders, customer informatione etc), as well as my custom MongoDB database for page layout and customer planner design data."],
+    "problemsThoughtProcess": ["The most technically challenging aspect of this project has been implementing the logic to compile pages for to the outputted PDF in the right sequence. Customers can choose from a range of dated layout types (e.g., monthly, weekly, daily) and the ordering logic can vary depending on the selections made (for example, if a customer selects both a weekly and daily layout, they will alterate a week at a time). I've had to learn about ISO weeks and think through complex logic to ensure the planner's page order makes sense, while also accommodating miscellaneous undated layouts in an order defined by the customer. It's been a process that's required lots of planning and experimentation to get right."],
+    "lessons": ["This project has provided a great learning opportunity to deepen my understanding of React, including hooks and component management. It's also forcing me to think deeply about user experience: ensuring the planner creation process is simple and intuitive. Additionally, learning to work with Shopify’s API and understanding its data points has been challenging but rewarding."]
+  },
+  {
+    "name": "PLANNER.STUDIO Shopify admin app",
+    "slug": "planner-studio-shopify-admin-app",
+    "shortDescription": "The back-end of the planner customisation tool.",
+    "description": "The back-end of the planner customisation tool. A custom Shopify admin app that allows me to manage page layouts within a MongoDB database, upload the associated PDF files to Google Cloud and convert them to watermarked image files for the website. I've also implemented a number of anti-risk measures to avoid human error when uploading the pages, including file name checks and date range checks, so I can ensure the pages being added to customers' planners are error-free.",
+    "techStack": ["Shopify", "Remix", "React", "MongoDB", "GraphQL", "Polaris"],
+    "images": [
+      {"image": "shopify-admin-layouts.png", "width": "3024", "height": "1964", "alt": "List of page layouts within the Shopify admin app."}, 
+      {"image": "shopify-admin-watermark.png", "width": "3024", "height": "1964", "alt": "Watermarked images are generated when PDFs are uploaded to the Shopify admin app."},
+      {"image": "shopify-admin-add-files.png", "width": "3024", "height": "1964", "alt": "Uploading PDF files to the Shopify admin app."}
+    ],
+    "github": null,
+    "id": 2,
+    "overview": ["The Shopify admin app was built for my business PLANNER.STUDIO to serve as the back-end for its planner customisation tool. It allows me to manage page layouts, convert PDFs to watermarked JPEGs, and run validation checks to ensure pages I upload are accurate when they get added to customers' planners. This project has simplified my workflow significantly and reduced my anxiety with multiple layers of error prevention."],
+    "purposeGoal": ["The primary goals of this app were to streamline layout management and reduce the need for me to triple-check products before sending to the customer. Up until recently I would manually compile pages in Adobe Acrobat. It was easy for me to make mistakes and to end up with inconsistencies between the pages customers chose and what was actually printed. Another motivation was to automate the conversion of uploaded PDFs into low-resolution, watermarked images, reducing the appeal of printing planner pages without purchase."],
+    "stackExplanation": ["The project was built using the Shopify embedded app workflow, which uses the Remix framework with Polaris React components, alongside a GraphQL API for accessing Shopify-specific data. I also set up a custom MongoDB database for storing planner page data, as well as another GraphQL layer and Google Cloud Storage buckets to host page layout PDFs and images."],
+    "problemsThoughtProcess": ["One challenge I faced during this project was learning how to integrate data from multiple sources. The app uses data from both the Shopify GraphQL API, as well as a custom MongoDB database I set up, which contains page layout and customer design data. Shopify provides limited flexibility for adding custom data to its API and I wanted to ensure I could design my schema in a way that suited its application.", "Working with Google Cloud was another learning curve — learning how to upload files remotely and connect to protected storage buckets.", "Ensuring planner page files are accurate when uploaded was also a critical part of this project. I implemented multiple checks, including cross-referencing uploaded file metadata with layout information in the database. Layouts cannot be marked as 'active' on the website until all conditions are met. The app also automatically deactivates layouts that don’t have at least two years of pages available, ensuring that customers always have a complete selection of pages for their planner."],
+    "lessons": ["This project taught me a lot about Remix and working with Shopify as a developer. It also enhanced my skills in database design and management, particularly working with MongoDB, Mongoose, and GraphQL. Iterating on the schema design multiple times helped me achieve a clean structure that met my current business requirements. Overall, it was a challenging but satisfying full-stack project that will make managing my business a less stressful experience."] 
+  },
+  {
+    "name": "Competition microsites",
+    "slug": "competition-microsites",
+    "shortDescription": "Conversion-optimised competition microsites built for Peazie.",
+    "description": "While working for a previous workplace Peazie, I built and styled dozens of conversion-optimised competition microsites. They were designed to drive email database and social media growth, generate UGC and boost product sales. They generally saw conversion rates of between 40-60%, far beyond the 12% industry average at the time.",
+    "techStack": ["HTML", "CSS", "Javascript"],
+    "images": [
+      {"image": "ardbeg.png", "width": "2622", "height": "2134", "alt": "A competition microsite built for Moet Hennessy for their Ardbeg whisky."},
+      {"image": "avene.png", "width": "1135", "height": "2000", "alt": "A competition microsite built for Pierre Fabre for their skincare brand Avène."},
+      {"image": "ayam.png", "width": "702", "height": "2000", "alt": "A competition microsite built for AYAM."},
+      {"image": "bega.png", "width": "940", "height": "2000", "alt": "A competition microsite built for Bega."},
+      {"image": "jack-daniels.png", "width": "1674", "height": "2000", "alt": "A competition microsite built for Jack Daniels."},
+      {"image": "kate-spade.png", "width": "2564", "height": "2000", "alt": "A competition microsite built for Kate Spade."},
+      {"image": "maltesers.png", "width": "1055", "height": "2000", "alt": "A competition microsite built for Maltesers."},
+      {"image": "puma.png", "width": "1090", "height": "2000", "alt": "A competition microsite built for Puma."},
+      {"image": "junkee-x-samuelwynn.png", "width": "1539", "height": "2000", "alt": "A competition microsite built for Junkee for their client Samuel Wynn."}
+
+    ],
+    "github": null,
+    "id": 3,
+    "overview": ["While working at Peazie, I built a series of conversion-optimized competition microsites aimed at increasing user engagement and growing email lists for clients. The microsites predominantly featured instant win mechanisms paired with major prize draws, which were highly effective in driving conversions and generating partially qualified leads for our clients."],
+    "purposeGoal": ["The goal of these microsites was to grow email databases and increase brand engagement by leveraging instant gratification, which motivated users to enter their details in hopes of winning a desirable prize. The prizes were carefully chosen to resonate with the target audience of each brand. Depending on the campaign, we sometimes requested only minimal information (e.g., name and email), while other times we gathered more detailed data or user-generated content, rewarding actions like sharing the competition with additional entries."],
+    "stackExplanation": ["The microsites were created using Peazie's proprietary CMS, then styled using CSS and JavaScript."],
+    "problemsThoughtProcess": ["I worked at Peazie for just over three and a half years, and over that time built dozens of microsites. When I first started I had limited experience with coding, but over time taught myself HTML, CSS and basic Javascript to give myself the ability to style the pages without having to rely so heavily on our talented but busy developer team. This gave them room to focus on the more complex interactive features of the websites, as well as maintaining and upgrading our internal CMS. It also meant that I was able to make quick changes to the pages when clients requested them, without having to wait for one of our developers to have availability."],
+    "lessons": ["Building these competition microsites was instrumental in my foundational understanding of front-end development. I got to practise a lot of CSS and some basic Javascript. I learnt about responsive design and how important it is to get right. I also taught myself MySQL so I could query the data collected from the competition forms. The role gave me an appreciation for the power of effective UX and data-driven design decisions."]
+  },
+  {
+    "name": "404 Fashion",
+    "slug": "404-fashion",
+    "shortDescription": "A fashion boutique e-commerce site built for a group project.",
+    "description": "A fashion boutique e-commerce site built for a group project. The site was built with a MySQL database and utilises Handlebars.js for templating.",
+    "techStack": ["MySQL", "Express.js", "Handlebars.js"],
+    "images": [
+      {"image": "404-fashion.png", "width": "624", "height": "850", "alt": "The home page of our group project ecommerce website, '404 Fashion'."},
+      {"image": "404-fashion-diagram.png", "width": "3024", "height": "1964", "alt": "Mapping out our design process."},
+      {"image": "404-fashion-schema.png", "width": "3024", "height": "1964", "alt": "Our MySQL database schema."}
+    ],
+    "github": "https://github.com/ecommerce-fashion-designer/fashion-designer",
+    "id": 4,
+    "overview": ["404 Fashion was a fashion boutique e-commerce site built for a group project using Handlebars.js, MySQL and Express.js. We were tasked with collaborating on a full-stack web application, using technologies of our choosing."],
+    "purposeGoal": ["The goal of this project was to develop a full-stack application as a team, practising skills in project management, Git workflows, and collaborative software development. We were given the freedom to choose what to build and which technologies to use, and we decided on an e-commerce platform to create a feature-rich application with a familiar structure. The project nurtured our technical skills and our ability to work together as a team."],
+    "stackExplanation": ["The site was built using Handlebars.js as the templating framework, with a MySQL database configured using Express.js."],
+    "problemsThoughtProcess": ["One of the biggest challenges we faced was designing the database. Despite initial planning and schema diagramming, we needed to iterate on our database multiple times as we learned more about the data points we required. Additionally, Handlebars.js was new to us, and understanding dynamic templating took time.", "The e-commerce site included user authentication and a product catalogue, though we ran out of time to fully implement the shopping cart functionality. Seeding the product data was a challenge that took us time to implement, but it was rewarding to see the site take shape with real product images, prices, and variants—it made the application feel real.","Working as a team on this project also required us to think deeply about effective task division, communication, and collaboration. At times there were breakdowns of communication when autonomous decisions were made without everyone being on the same page. Working through these challenges was a helpful exercise in improving our communication and workflow. Additionally, working through Git workflows was challenging as we were all new to handling merge conflicts."],
+    "lessons": ["The biggest takeaway from this project was learning how to effectively collaborate as a team on a complex application. Having a clear plan, maintaining good communication, and updating each other frequently were key to managing the project successfully. It also taught me a lot about the full-stack development process, including database design, dynamic templating, and handling the challenges of Git workflows as part of a team.", "The skills gained from working with Handlebars.js later also proved valuable in my current role, where our team predominantly uses Twig templating for our Craft CMS projects."]
+  },
+  {
+    "name": "README Generator",
+    "slug": "readme-generator",
+    "shortDescription": "A command-line application to generate a README.md file.",
+    "description": "A command-line application to generate a README.md file. The application prompts the user with questions about their project, then uses their responses to populate the file.",
+    "techStack": ["Node.js"],
+    "images": [
+      {"image": "readme-generator.png", "width": "1479", "height": "415", "alt": "A CLI application to generate a README.md file."},
+      {"image": "readme-generator-example.png", "width": "851", "height": "2000", "alt": "Example README.md file generated by the application."}
+    ],
+    "github": "https://github.com/katyjmt/readme-generator",
+    "id": 5,
+    "overview": ["The README Generator is a command-line application built with Node.js for a coding bootcamp project. Its purpose is to help developers quickly generate professional README.md files based on user input. The tool simplifies the documentation process and ensure developers follow best practices when describing their projects."],
+    "purposeGoal": ["The project served a dual purpose: streamlining the process of writing README files and providing me with an opportunity to learn more about Node.js and the command-line interface."],
+    "stackExplanation": ["The application was built with Node.js, using npm packages like 'badge-maker' to add license badges at the top of the README, 'fs' for file writing, and 'inquirer' for prompting the user through a series of questions."],
+    "problemsThoughtProcess": ["Adapting to the command-line environment was challenging initially, as it was a different experience compared to working in a visual interface, but it was a helpful exercise in thinking differently about user interaction.","The generator's questions were based on a best-practice guide provided by my university, ensuring that the README files produced were consistent and useful. Looking ahead, I'd like to enhance the application by allowing users to opt-out of specific questions (without generating unnecessary headings) and implementing conditional logic based on the user’s responses."],
+    "lessons": ["This was my first experience building a project without a visual user interface, and it required a different problem-solving approach. It taught me how to think through user interactions in a purely text-based environment. I also found it incredibly satisfying to create something useful for my day-to-day while completing the bootcamp, not to mention it made me feel like a hacker from a TV show creating something on the command line (hah). The project reinforced my understanding of Node.js and gave me confidence in creating useful developer tools."]
+  }
+]
+
+
