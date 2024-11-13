@@ -1,8 +1,7 @@
 import brands from "../data/brands.json";
 import Image from "next/image";
 
-type Props = {};
-export default function BrandBar({}: Props) {
+export default function BrandBar() {
   return (
     <div className="brand-bar flex flex-wrap justify-end gap-4 w-full">
       {brands.map((brand) => (

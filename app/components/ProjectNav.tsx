@@ -2,20 +2,10 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
 import {ArrowLeftIcon} from '@heroicons/react/24/outline';
 
 
 export default function ProjectNav() {
-  const [activeLink, setActiveLink] = useState("")
-
-  const handleSetActive = (section: string) => {
-    setActiveLink(section);
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <nav className="navbar font-evie tracking-wide text-2xl sm:text-3xl fixed top-0 w-full px-1 z-50 bg-[var(--background)]">

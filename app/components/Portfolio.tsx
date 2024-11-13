@@ -5,18 +5,12 @@ import Link from "next/link";
 import portfolio from "../data/portfolio.json";
 import {ArrowRightIcon} from '@heroicons/react/24/outline';
 
-type Props = {};
-
-export default function Portfolio({}: Props) {
+export default function Portfolio() {
   return (
     <>
       <h2 className="uppercase font-evie font-medium text-left mb-10">
         Portfolio
       </h2>
-      {/* <p className="portfolio-description font-evie">
-        I love to keep busy and learn new skills, so always have a few projects
-        on the go. Here are a few of my favourites.
-      </p> */}
       <div className="portfolio-tiles flex gap-12 flex-wrap justify-center">
         {portfolio.map((project) => (
           <div className="w-full | md:w-5/12" key={project.id}>

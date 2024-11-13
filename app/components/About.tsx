@@ -2,11 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import BrandBar from "./BrandBar";
 
-export default function About({}: Props) {
+export default function About() {
   return (
     <div className="about">
       <h2 className="uppercase font-evie font-medium text-left mb-10">
-        Hi, I'm Katy
+        Hi, I&apos;m Katy
       </h2>      
       <div className="about-content font-evie flex flex-col gap-4 w-11/12 m-auto">
         <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 items-start">
