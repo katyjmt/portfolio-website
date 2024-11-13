@@ -12,7 +12,7 @@ export default function About() {
         <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 items-start">
           <div className="intro basis-3/12 flex flex-col gap-8">
             <Image
-              src="/images/katy-thompson.jpg"
+              src="/images/katy.png"
               alt="Photo of Katy"
               className="object-cover h-full w-full border border-black rounded-lg basis-6/12"
               width={998}
