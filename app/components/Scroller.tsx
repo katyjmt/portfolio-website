@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Scroller() {
   const scrollerRef = useRef(null);
-  const [isFixed, setIsFixed] = useState(false);
+  const [isFixed] = useState(false);
 
   // Once the scroller element touches / intersects with the nav at -40px, 
 
