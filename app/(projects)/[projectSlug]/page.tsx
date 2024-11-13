@@ -163,7 +163,7 @@ export default async function Page({ params }: Props) {
             </div>
           </div>
           <div className="project-images flex flex-col gap-10">
-            {project?.images?.length > 1 ? (
+            {project?.images?.length ?? 0 > 1 ? (
               <>
             {project?.images.slice(1).map((img, index) => (
               <div key={index} className="project-image">
