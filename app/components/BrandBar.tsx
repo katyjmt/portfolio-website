@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function BrandBar() {
   return (
-    <div className="brand-bar flex flex-wrap justify-end gap-4 w-full">
+    <div className="brand-bar flex flex-wrap justify-center sm:justify-end gap-4 w-full">
       {brands.map((brand) => (
         <div
           key={brand.name}
