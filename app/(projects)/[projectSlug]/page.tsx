@@ -2,6 +2,7 @@ import projects from "../../data/portfolio.json";
 import Image from "next/image";
 import Link from "next/link";
 import css from "../../../public/techstack/css.svg";
+import type { StaticImageData } from "next/image";
 import express from "../../../public/techstack/express.png";
 import handlebars from "../../../public/techstack/handlebars.webp";
 import html from "../../../public/techstack/html.png";
@@ -18,7 +19,7 @@ import polaris from "../../../public/techstack/shopify-polaris.png";
 import graphql from "../../../public/techstack/graphql.png";
 import github from "../../../public/icons/github.svg";
 
-const stackLogos = {
+const stackLogos: { [key: string]: StaticImageData } = {
   Shopify: shopify,
   CSS: css,
   "Express.js": express,
@@ -70,7 +71,7 @@ export default async function Page({ params }: Props) {
         </div>
         <section className="project-section">
           <div className="project-tech-stack">
-            {project?.techStack?.map((tech) => (
+            {project?.techStack?.map((tech: string) => (
               <div key={tech} className="project-tech-item flex">
                 <Image
                   key={tech}
